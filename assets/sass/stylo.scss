@@ -1,0 +1,458 @@
+// import 'bootstrap';
+
+@import '../bootstrap-5.3.2/scss/bootstrap.scss';
+
+//tipos de fuentes importadas
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display&family=Press+Start+2P&display=swap');
+
+// variables
+
+$tipo-fuente1: 'Playfair Display', sans-serif;
+$tipo-fuente2: 'Open Sans', sans-serif;
+$color-negro: black;
+$color-blanco: white;
+$color-naranja: #e8bf5d;
+$color-gris: grey;
+$color-other1: #e1e1e1;
+$color-other2: #222222;
+$font-size-P: 13px;
+$font-sizes: 12px;
+$font-sizesH2: 25px;
+
+@mixin numero {
+    position: absolute;
+    font-size: 150px;
+    z-index: 1;
+}
+
+@mixin about {
+    position: relative;
+    z-index: 2;
+    padding: 65px 30px 30px 30px;
+}
+
+@mixin descripcion {
+    padding-right: 37%;
+}
+
+@mixin magenes{
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+/* estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: $color-blanco;
+}
+
+.navbar{
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.navbar-brand{
+    font-family: $tipo-fuente1;
+    font-weight: bolder;
+    font-size: $font-sizesH2;
+}
+
+.punto{
+    color: $color-naranja;
+}
+
+.nav-item:after{
+    font-family: $tipo-fuente2;
+    content: "";
+    position: absolute;
+    background-color: $color-naranja;
+    height: 3px;
+    width: 0;
+    bottom: 25px;
+    transition: 0.3s;
+    
+}
+
+.nav-item:hover:after{
+    width: 6%;
+}
+
+.mask{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 18%;
+    height: 93%;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+#fondo1{
+    width: 100%;
+    z-index: 1;
+}
+
+.persona1{
+    color: $color-blanco;
+    z-index: 2;
+    position: absolute;
+    padding-left: 25%;
+    padding-top: 31%;
+    font-family: $tipo-fuente1
+}
+
+.persona1 strong{
+    font-size: 60px;
+}
+
+.persona1 p{
+    font-family: $tipo-fuente2;
+    font-size: 40px;
+}
+
+.button a{
+    font-family: $tipo-fuente1;
+    text-decoration: none;
+    padding: 10px 40px;
+    background: $color-naranja;
+    border-radius: 50px;
+    color: $color-negro;
+    position: static;
+}
+
+.seccion1 .button{
+    padding-left: 65%;
+    padding-top: 35%;
+    position: absolute;
+    z-index: 10;
+}
+
+#numero{
+    @include numero();
+    @include magenes();
+    color: $color-other1;
+    font-family: $tipo-fuente2;
+}
+
+.about{
+    @include about();
+    font-family: $tipo-fuente1;
+    padding-left: 20%;
+    font-size: 25px;
+}
+
+.about p{
+    @include descripcion();
+    font-family: $color-gris;
+    font-size: 18px;
+    color: $color-gris;
+}
+
+.Information1{
+    padding-top: 1%;
+    padding-left: 20%;
+}
+
+.Information1 h3{
+    font-family: $tipo-fuente1;
+    font-size: 15px;
+}
+
+.Expertise{
+    padding-left: 50%;
+    position: relative;
+}
+
+.History{
+    padding-right: 21%;
+    position: absolute;
+}
+
+.History strong{
+    position: absolute;
+    padding-top: 3%;
+    font-family: $tipo-fuente2;
+}
+
+.History p{
+    padding-top: 4%;
+    padding-left: 13%;
+    padding-right: 33%;
+    position: relative;
+    font-family: $tipo-fuente2;
+    font-size: $font-size-P;
+}
+
+.le1{
+    display: flex;
+    position: static;
+}
+
+.le2{
+    display: flex;
+    position: static;
+}
+
+.le3{
+    display: flex;
+    position: static;
+}
+
+.Expertise p{
+    color: $color-gris;
+    font-size: 14px;
+    font-family: $tipo-fuente2;
+    padding-top: 4%;
+}
+
+#seccion2{
+    margin-bottom: 3%;
+}
+
+#seccion3{
+    background-color: $color-negro;
+}
+
+.practis{
+    color: $color-blanco;
+}
+
+#numero2{
+    @include numero();
+    @include magenes();
+    color: $color-other2;
+    font-family: $tipo-fuente2;
+}
+
+#p1 #p2 #p3 #p4{
+    max-width: 540px;
+}
+
+#content{
+    margin-left: 25%;
+}
+
+#seccion3 .card-title{
+    font-family: $tipo-fuente1;
+    color: $color-blanco;
+}
+
+#seccion3 .card-text{
+    padding-top: 1%;
+    font-size: $font-size-P;
+    color: $color-blanco;
+    font-family: $tipo-fuente2;
+}
+
+#img{
+    padding-left: 22%;
+    font-size: $font-size-P;
+    font-family: $tipo-fuente1;
+}
+
+.fondo2 img{
+    width: 100%;
+    z-index: 0;
+}
+
+.seccion5 .numero4{
+    position: absolute;
+    color: $color-other2;
+    font-size: 150px;
+    font-family: $tipo-fuente2;
+    z-index: 2;
+}
+
+
+.seccion5 .our{
+    position: absolute;
+    font-family: $tipo-fuente1;
+    z-index: 3;
+    padding: 60px 30px 30px 20px;
+    color: white;
+}
+
+.seccion5 .our p{
+    color: grey;
+    padding-right: 37%;
+    z-index: 3;
+}
+
+.seccion5 .our::before{
+    position: absolute;
+    font-family: $tipo-fuente1;
+    z-index: 3;
+}
+
+.seccion5{
+    margin-top: 5%;
+    background-color: $color-negro;
+}
+
+.mover{
+    margin-left: 20%;
+}
+
+.alon{
+    margin-top: 14%;
+    margin-left: 20%;
+    position: absolute;
+    z-index: 5;
+}
+
+.alon::before{
+    position: relative;
+    z-index: 5;
+}
+
+.amarillo{
+    margin-top: 15%;
+    margin-left: 21%;
+    position: absolute;
+    z-index: 4;
+}
+
+.alon::after{
+    position: relative;
+    z-index: 4;
+}
+
+.info2{
+    display: flex;
+    margin-top: 14%;
+    margin-left: 43%;
+    margin-right: 20%;
+    position: absolute;
+}
+
+.info3{
+    position: absolute;
+}
+
+.alon img{
+    width: 80%;
+}
+
+.amarillo img{
+    width: 80%;
+}
+
+.info2 img{
+    position: absolute;
+}
+
+.info2 p{
+    padding-left: 7%;
+    padding-top: 1%;
+    color: $color-blanco;
+    font-family: $tipo-fuente1;
+    font-size: 15px;
+}
+
+.info3{
+    color: $color-blanco;
+    margin-top: 27%;
+    margin-left: 45.5%;
+    margin-right: 20%;
+    font-family: $tipo-fuente1;
+}
+
+.puntos{
+    display: flex;
+    position: absolute;
+    margin-top: 33%;
+    margin-left: 45.5%;
+}
+
+.puntos div{
+    margin-left: 5px;
+    margin-bottom: 1%;
+}
+
+#partes{
+    padding-top: 3%;
+    padding-left: 15%;
+    font-family: $tipo-fuente1;
+}
+
+#partes h6, small{
+    font-style: italic;
+    color: $color-gris;
+}
+
+#partes span{
+    color: $color-negro;
+    font-style: none;
+}
+
+#partes .card-title{
+    font-size: 16px;
+}
+
+#partes .card-text{
+    font-size: $font-size-P;
+    color: $color-gris;
+}
+
+#partes .card-footer img{
+    width: 60px;
+}
+
+.decoration1{
+    position: relative;
+    bottom: 1px;
+    height: 3px;
+    margin-top: 4%;
+    margin-left: 0%;
+    margin-right: 0%;
+    border-bottom: 5px;
+    background-color: $color-naranja;
+}
+
+#seccion6{
+    margin-bottom: 5%;
+}
+
+#seccion7{
+    background: $color-negro;
+}
+
+#text2{
+    position: absolute;
+    background-color: $color-naranja;
+    margin-left: 45%;
+    margin-right: 20%;
+    -webkit-box-shadow:0 0px 20px $color-naranja, 0 0 20px $color-naranja inset;
+    -moz-box-shadow:0 0px 20px $color-naranja, 0 0 20px $color-naranja inset;
+    box-shadow:0 0px 20px $color-naranja, 0 0 20px $color-naranja inset;
+}
+
+#text2 p{
+    font-family: $tipo-fuente2;
+    font-size: $font-size-P;
+    padding: 20px 30px 85px 30px;
+}
+
+#lista{
+    padding-left: 20%;
+    font-size: $font-size-P;
+    padding-bottom: 10%;
+}
+
+footer{
+    background-color: black;
+}
+
+
+
+input, textarea{
+    font-style: italic;
+}
+
